@@ -1,79 +1,93 @@
-# Clera
+# ⚡ Clera
 
 **Build apps with the web stack — without the usual complexity.**
 
-Clera is a development environment that lets you build applications using **HTML, CSS, and JavaScript**, preview them instantly, and export them as **PWA or native apps**.
+Clera is a development platform where **HTML, CSS, and JavaScript become real applications**.
 
-Instead of managing complex tooling, Clera provides a **single workflow** for building and deploying web-based applications.
-
----
-
-## Why Clera?
-
-Modern web development often requires configuring multiple tools:
-
-- Bundlers
-- Frameworks
-- Dev servers
-- Build pipelines
-- Packaging tools
-
-Clera removes this friction by combining everything into **one environment**.
-
-Write your application using the web stack and let Clera handle the rest.
+Write your app → preview instantly → export anywhere.
 
 ---
 
-## Features
+## 🚀 What Clera Does
 
-### Integrated Development Environment
-- Built-in editor
-- Project management
-- Structured templates
+Clera removes the typical friction in web development.
 
-### Clera Runtime
-- Executes applications inside a controlled runtime
-- Deterministic application lifecycle
-- Component registration system
+Instead of juggling:
 
-### Simulator
-- Instant application preview
-- Multiple simulator instances
-- Fast reload workflow
+• bundlers  
+• frameworks  
+• dev servers  
+• packaging tools  
+• simulators  
 
-### Live Server
-Run projects locally and preview in any browser.
+Clera gives you **one environment** to build and ship apps.
 
-Example:
+---
+
+## ✨ Key Features
+
+🧩 **Integrated Editor**  
+Write your app directly inside Clera Studio.
+
+⚙️ **Clera Runtime**  
+Runs your application inside a controlled runtime environment.
+
+📱 **Built-in Simulator**  
+Preview your app instantly.
+
+🌐 **Live Server**  
+Run your project locally:
 
 ```
 http://localhost:PORT
 ```
 
-Perfect for testing responsive layouts and mobile behavior.
+Perfect for testing responsiveness.
 
-### Packaging
+📦 **Export Anywhere**
 
-Export your project as:
+Package your app as:
 
-- **Progressive Web App (PWA)**
-- **Native desktop or mobile app**
-
----
-
-## Example Workflow
-
-Create a project → write HTML → run simulator → export app.
-
-1. Create a new project
-2. Write UI with HTML, CSS, and JavaScript
-3. Start the simulator
-4. Preview in the browser
-5. Export as PWA or native app
+- Progressive Web App (PWA)
+- Native applications
 
 ---
 
-## Example Project
+## 🧠 The Idea
+
+Clera treats the **web stack as an application platform**.
+
+Instead of complex build systems, you simply write:
+
+```
+HTML
+CSS
+JavaScript
+```
+
+And Clera turns it into a working application.
+
+---
+
+## ⚡ Typical Workflow
+
+```
+Create project
+     ↓
+Write HTML / CSS / JS
+     ↓
+Start simulator
+     ↓
+Preview in browser
+     ↓
+Export app
+```
+
+Simple. Fast. Predictable.
+
+---
+
+## 📂 Example Project
 
 ```
 my-app/
@@ -81,28 +95,19 @@ my-app/
 ├── app.html
 ├── styles.css
 ├── script.js
-│
 └── clera.config.json
 ```
 
-Clera loads the project through the runtime and executes the application inside the simulator.
+Clera loads the project and runs it inside the runtime engine.
 
 ---
 
-## Philosophy
+## 🔬 Status
 
-Clera treats **web applications as real applications**.
-
-Instead of adapting the web stack to complex build systems, Clera provides an environment where the web stack becomes the **application platform itself**.
+Clera is currently in **early development**.
 
 ---
 
-## Status
-
-Clera is currently under active development.
-
----
-
-## License
+## 📜 License
 
 MIT License
