@@ -110,4 +110,16 @@ Clera is currently in **early development**.
 
 ## 📜 License
 
-MIT License
+Clera Runtime is licensed under the Elastic License 2.0.
+
+You are free to:
+
+• use the runtime
+• modify the runtime
+• build commercial apps using the runtime
+• contribute improvements
+
+You may NOT:
+
+• provide Clera Runtime as a competing hosted service
+• create a competing Clera platform
