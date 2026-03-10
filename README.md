@@ -2,84 +2,78 @@
 
 **Build apps with the web stack — without the usual complexity.**
 
-Clera is a modern development environment for building applications using **HTML, CSS, and JavaScript**. It combines an editor, runtime, simulator, and packaging tools into a single workflow so developers can write web apps and deploy them as **PWA or native applications**.
+Clera is a development environment that lets you build applications using **HTML, CSS, and JavaScript**, preview them instantly, and export them as **PWA or native apps**.
+
+Instead of managing complex tooling, Clera provides a **single workflow** for building and deploying web-based applications.
 
 ---
 
-## Philosophy
+## Why Clera?
 
-Modern web development often involves heavy tooling, configuration, and fragmented workflows.
+Modern web development often requires configuring multiple tools:
 
-Clera simplifies this.
+- Bundlers
+- Frameworks
+- Dev servers
+- Build pipelines
+- Packaging tools
 
-Instead of managing bundlers, frameworks, build pipelines, and separate simulators, Clera provides a **single environment where the web stack becomes an application platform.**
+Clera removes this friction by combining everything into **one environment**.
 
-Write your app using familiar technologies:
-
-- HTML
-- CSS
-- JavaScript
-
-Then preview instantly and export your project as a deployable application.
-
----
-
-## Core Idea
-
-Clera treats web apps as **first-class applications**.
-
-A project written with standard web technologies can be:
-
-- Run inside the Clera simulator
-- Previewed live in the browser
-- Exported as a Progressive Web App (PWA)
-- Packaged as a native desktop or mobile application
-
-All without complex setup.
+Write your application using the web stack and let Clera handle the rest.
 
 ---
 
 ## Features
 
-### Development Environment
-- Built-in code editor
-- Integrated project management
-- Structured app templates
+### Integrated Development Environment
+- Built-in editor
+- Project management
+- Structured templates
 
-### Runtime Engine
-- Clera runtime for executing web applications
-- Deterministic app lifecycle
+### Clera Runtime
+- Executes applications inside a controlled runtime
+- Deterministic application lifecycle
 - Component registration system
 
 ### Simulator
-- Instant app preview
+- Instant application preview
 - Multiple simulator instances
 - Fast reload workflow
 
 ### Live Server
-- Run projects with an internal server
-- Access via `http://localhost:PORT`
-- Test responsiveness across devices
+Run projects locally and preview in any browser.
+
+Example:
+
+```
+http://localhost:PORT
+```
+
+Perfect for testing responsive layouts and mobile behavior.
 
 ### Packaging
-Export applications as:
 
-- **PWA (Progressive Web App)**
-- **Native applications (via wrappers)**
+Export your project as:
 
----
-
-## Typical Workflow
-
-1. Create a new Clera project
-2. Write your UI using HTML, CSS, and JavaScript
-3. Run the simulator
-4. Preview via local server
-5. Export as PWA or native application
+- **Progressive Web App (PWA)**
+- **Native desktop or mobile app**
 
 ---
 
-## Example Project Structure
+## Example Workflow
+
+Create a project → write HTML → run simulator → export app.
+
+1. Create a new project
+2. Write UI with HTML, CSS, and JavaScript
+3. Start the simulator
+4. Preview in the browser
+5. Export as PWA or native app
+
+---
+
+## Example Project
 
 ```
 my-app/
@@ -91,28 +85,21 @@ my-app/
 └── clera.config.json
 ```
 
-Clera reads the project structure and loads the application inside the runtime environment.
+Clera loads the project through the runtime and executes the application inside the simulator.
 
 ---
 
-## Why Clera?
+## Philosophy
 
-Clera focuses on removing **workflow friction**.
+Clera treats **web applications as real applications**.
 
-Instead of:
-
-- configuring complex build systems
-- managing multiple development tools
-- setting up deployment pipelines
-
-Developers can focus on building the application itself.
+Instead of adapting the web stack to complex build systems, Clera provides an environment where the web stack becomes the **application platform itself**.
 
 ---
 
 ## Status
 
-Clera is currently in early development.  
-The goal is to provide a streamlined environment for building apps using the web stack.
+Clera is currently under active development.
 
 ---
 
