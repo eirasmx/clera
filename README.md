@@ -1,125 +1,91 @@
-# ⚡ Clera
+# 🚀 Clera
 
-**Build apps with the web stack — without the usual complexity.**
+**Build real apps with HTML, CSS, and JavaScript. No framework. No build step.**
 
-Clera is a development platform where **HTML, CSS, and JavaScript become real applications**.
-
-Write your app → preview instantly → export anywhere.
+Clera is a runtime that turns web code into real app experiences. Write your app in HTML, CSS, and JavaScript. Preview it live in Clera Studio.  Ship it as a Website, PWA or Native app. 
 
 ---
 
-## 🚀 What Clera Does
+## 👀 What it looks like
 
-Clera removes the typical friction in web development.
+```html
+<app>
+  <page name="tasks" oncreate="loadTasks">
+    <h1>My Tasks</h1>
 
-Instead of juggling:
+    <ul id="taskList"></ul>
 
-• bundlers  
-• frameworks  
-• dev servers  
-• packaging tools  
-• simulators  
+    <form action="addTask">
+      <input name="taskTitle" placeholder="New task" />
+      <button type="submit">Add</button>
+    </form>
+  </page>
+</app>
 
-Clera gives you **one environment** to build and ship apps.
+<script src="app.js"></script>
+```
+
+```js
+function loadTasks() {
+  document.getElementById("taskList").innerHTML = "<li>Buy groceries</li>";
+}
+
+function addTask(context) {
+  const item = document.createElement("li");
+  item.textContent = context.values.taskTitle;
+  document.getElementById("taskList").appendChild(item);
+}
+```
+
+That is a working app. No setup, no imports, no configuration.
 
 ---
 
-## ✨ Key Features
+## ✨ What Clera gives you
 
-🧩 **Integrated Editor**  
-Write your app directly inside Clera Studio.
-
-⚙️ **Clera Runtime**  
-Runs your application inside a controlled runtime environment.
-
-📱 **Built-in Simulator**  
-Preview your app instantly.
-
-🌐 **Live Server**  
-Run your project locally:
-
-```
-http://localhost:PORT
-```
-
-Perfect for testing responsiveness.
-
-📦 **Export Anywhere**
-
-Package your app as:
-
-- Progressive Web App (PWA)
-- Native applications
+- **Clera Runtime** — runs your app inside a controlled, secure environment
+- **Clera Studio** — the IDE built for Clera, with a built-in simulator so you can preview your app on a phone screen without leaving your editor
+- **Export anywhere** — package as a PWA or native app when you are ready
 
 ---
 
-## 🧠 The Idea
+## ⚙️ How it works
 
-Clera treats the **web stack as an application platform**.
-
-Instead of complex build systems, you simply write:
+You write HTML, CSS, and JavaScript the same way you always have. Clera adds a thin runtime layer on top that handles pages, navigation, lifecycle, and actions. Your code stays normal. The runtime carries the weight.
 
 ```
-HTML
-CSS
-JavaScript
-```
-
-And Clera turns it into a working application.
-
----
-
-## ⚡ Typical Workflow
-
-```
-Create project
-     ↓
 Write HTML / CSS / JS
-     ↓
-Start simulator
-     ↓
-Preview in browser
-     ↓
-Export app
+        ↓
+Clera runtime mounts and manages your app
+        ↓
+Preview instantly in the simulator
+        ↓
+Export as PWA or native app
 ```
-
-Simple. Fast. Predictable.
 
 ---
 
-## 📂 Example Project
+## 📂 Project structure
 
 ```
 my-app/
-│
-├── app.html
+├── index.html    ← your app
 ├── styles.css
-├── script.js
-└── clera.config.json
+└── app.js
 ```
-
-Clera loads the project and runs it inside the runtime engine.
 
 ---
 
 ## 🔬 Status
 
-Clera is currently in **early development**.
+Clera is in active pre-release development. The runtime, compiler, and studio are being built and tested. Early access is available to a small group of testers.
+
+If you are interested in testing Clera before launch, open an issue or start a discussion.
 
 ---
 
 ## 📜 License
 
-Clera Runtime is licensed under the **Elastic License 2.0**.
+Licensed under the [Elastic License 2.0](./LICENSE).
 
-### You are free to:
-
-- Use the runtime
-- Modify the runtime
-- Build commercial apps using the runtime
-- Contribute improvements
-
-### You may **NOT**:
-
-- Provide Clera Runtime as a competing hosted service
-- Create a competing Clera platform
+You can use the runtime, build apps with it, and modify it. You may not offer Clera as a competing hosted service or platform.

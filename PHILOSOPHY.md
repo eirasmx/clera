@@ -1,225 +1,107 @@
-# ✨ Clera Design Philosophy
+# Clera Design Philosophy
 
-## 🌍 Build on the web. Do not fight the web.
+## Build on the web. Do not fight the web.
 
-Clera is designed as a runtime that helps developers turn **HTML, CSS, and JavaScript into real apps** — with less friction.
-
-It does **not replace the browser** ❌  
-It **enhances the browser** ✅
+Clera is a runtime that turns HTML, CSS, and JavaScript into real applications. It does not replace the browser. It gives the browser a job to do.
 
 ---
 
-## 🧠 Core Idea
+## HTML is the app
 
-Clera should let developers:
+In Clera, HTML is not just markup. It defines the structure of your application: pages, lifecycle, actions, and navigation. You can read the app directly from the HTML without context.
 
-- ✍️ write HTML  
-- ⚙️ write JavaScript  
-- 🚀 have an app  
-
-With **minimal mental overhead**.
-
-The runtime carries complexity — not the developer.
-
----
-
-## 🧩 HTML Is the App
-
-In Clera, HTML is not just markup.
-
-It defines:
-
-- 🏠 app structure  
-- 📄 pages  
-- 🔁 lifecycle  
-- 🎯 actions  
-- 🔗 navigation  
-
-👉 You can *read the app directly from the HTML*.
+```html
+<page name="home" oncreate="loadHome">
+  <h1>{title}</h1>
+  <button action="openSettings">Settings</button>
+</page>
+```
 
 ---
 
-## ⚙️ JavaScript Is Behavior
+## JavaScript is behavior
 
-JavaScript stays **normal JavaScript**.
+JavaScript stays normal JavaScript. No special syntax, no forced patterns, no framework concepts to learn first.
 
-No weird syntax. No forced patterns.
+```js
+function loadHome(context) {
+  context.data({ title: "Welcome" });
+}
 
-    function addTask(pageContext) {
-      console.log(pageContext.values.taskTitle);
-    }
+function openSettings(context) {
+  context.navigate("settings");
+}
+```
 
-👉 Familiar. Predictable. Simple.
-
----
-
-## 🛠️ Convenience, Not Restriction
-
-Clera provides helpers like:
-
-- pageContext.render(...)
-- pageContext.append(...)
-- pageContext.clear(...)
-
-These are **optional**.
-
-### Clera way
-
-    pageContext.render("#taskList", html);
-
-### Vanilla still works
-
-    document.getElementById("taskList").innerHTML = html;
-
-👉 Freedom is the feature 💎
+Familiar. Predictable. Nothing new to unlearn.
 
 ---
 
-## ⚡ The Runtime Carries the Weight
+## The runtime carries the weight
 
-Clera removes the need to think about:
-
-- ❌ action registration  
-- ❌ form value extraction  
-- ❌ rebinding dynamic DOM  
-- ❌ lifecycle plumbing  
-
-👉 You focus on **building**, not wiring.
+Clera removes the plumbing developers usually wire by hand: action registration, form value extraction, DOM rebinding after updates, lifecycle management, page transitions. You focus on what your app does, not how to connect the pieces.
 
 ---
 
-## 🧘 Minimal Mental Load
+## Convenience, not restriction
 
-Clera optimizes for:
+Clera provides helpers. They are optional. Vanilla DOM APIs always work alongside them.
 
-- fewer concepts 🟢  
-- fewer APIs 🟢  
-- fewer steps 🟢  
-- fewer surprises 🟢  
+```js
+// Clera way
+context.render("#list", html);
 
-👉 It should feel obvious.
+// Vanilla — equally valid
+document.getElementById("list").innerHTML = html;
+```
 
----
-
-## 🚀 Progressive Power
-
-Start simple:
-
-    function addTask() {
-      console.log("Added");
-    }
-
-Go deeper when needed:
-
-    function addTask(pageContext) {
-      console.log(pageContext.values.taskTitle);
-    }
-
-👉 Same system. More power when needed.
+Freedom is the feature.
 
 ---
 
-## 🌐 Stay Close to the Platform
+## Progressive power
 
-Clera respects the web:
+Start with the minimum. Add depth when the feature needs it.
 
-- HTML stays HTML 🧩  
-- JS stays JS ⚙️  
-- CSS stays CSS 🎨  
+```js
+// Minimal
+function addTask() {
+  console.log("task added");
+}
 
-👉 No lock-in. No fighting the platform.
+// With context
+function addTask(context) {
+  const title = context.values.taskTitle;
+  context.append("#taskList", `<li>${title}</li>`);
+}
+```
 
----
-
-## 🧱 Runtime, Not Framework
-
-Clera is a **runtime**, not a heavy framework.
-
-It gives you:
-
-- execution ⚙️  
-- structure 🧩  
-- lifecycle 🔁  
-- navigation 🔗  
-- interaction 🎯  
-
-👉 Without forcing a complex mental model.
+Same system. Same function. More power when you reach for it.
 
 ---
 
-## 🎯 Zero-Ceremony by Default
+## Stay close to the platform
 
-### HTML
-
-    <page name="tasks" oncreate="loadTasks">
-      <form action="addTask">
-        <input name="taskTitle">
-        <button type="submit">Add</button>
-      </form>
-    </page>
-
-### JavaScript
-
-    function loadTasks() {}
-
-    function addTask(pageContext) {
-      console.log(pageContext.values.taskTitle);
-    }
-
-👉 That’s enough. No setup required.
+HTML stays HTML. CSS stays CSS. JavaScript stays JavaScript. Clera does not introduce a new language or force you into a proprietary mental model. When you know how to build a webpage, you already know most of Clera.
 
 ---
 
-## 🔓 Escape Hatches Always Exist
+## Runtime, not framework
 
-Need raw power?
-
-    document.querySelector("#taskList").innerHTML = html;
-
-👉 Clera never blocks you.
+Clera is a runtime. It gives you execution, structure, lifecycle, navigation, and interaction. It does not impose a component model, a state management pattern, or an opinion about how your data flows. You own your architecture.
 
 ---
 
-## 🧩 Small Helpers, Not Big Systems
-
-Clera grows by adding:
-
-- small helpers ✨  
-- practical utilities 🧰  
-- low-friction improvements ⚡  
-
-Not:
-
-- ❌ huge frameworks  
-- ❌ complex reactivity  
-- ❌ heavy abstractions  
-
----
-
-## ⚖️ Simplicity Is a Choice
-
-Every feature must answer:
+## The test for every feature
 
 Does this reduce friction without breaking the model?
 
-If yes → keep it ✅  
-If no → drop it ❌
+If yes, it belongs in Clera. If no, it does not.
 
 ---
 
-## 🏆 Final Principle
+## The promise
 
-Clera exists to make building apps feel **lighter**.
+Write HTML. Write JavaScript. Have an app.
 
-Not by removing power…  
-But by removing friction.
-
----
-
-## 🚀 The Promise
-
-✍️ Write HTML  
-⚙️ Write JavaScript  
-📱 Have an app  
-
-That’s Clera.
+That is Clera.
