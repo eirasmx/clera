@@ -86,6 +86,8 @@ If you are interested in testing Clera before launch, open an issue or start a d
 
 ## 📜 License
 
-Licensed under the [Elastic License 2.0](./LICENSE).
+Licensed under the MIT License.
 
-You can use the runtime, build apps with it, and modify it. You may not offer Clera as a competing hosted service or platform.
+You are free to use, modify, and distribute this software for personal and commercial purposes, subject to the terms of the MIT License.
+
+See the full license text in the [LICENSE](./LICENSE) file.
