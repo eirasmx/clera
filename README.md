@@ -1,4 +1,4 @@
-# 🚀 Clera
+# 🚀 Clera Runtime
 
 **Build real apps with HTML, CSS, and JavaScript. No framework. No build step.**
 
