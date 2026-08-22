@@ -1,0 +1,70 @@
+{% extends "!layout.html" %}
+
+{% block extrahead %}
+{{ super() }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Clera",
+  "alternateName": ["CRE", "Clera Runtime"],
+  "description": "A web-stack development ecosystem for building native desktop application experiences from standard HTML, CSS, and JavaScript. Includes the CRE runtime, Clera Studio IDE, and supporting tooling, and powers CleraOS and third-party CRE apps.",
+  "codeRepository": "https://github.com/eirasmx/clera",
+  "programmingLanguage": "JavaScript",
+  "author": {
+    "@type": "Person",
+    "name": "Erasmus A. Junior",
+    "alternateName": "eirasmx",
+    "sameAs": ["https://github.com/eirasmx"]
+  },
+  "sameAs": ["https://github.com/eirasmx/clera"],
+  "isRelatedTo": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Clera GUI",
+      "author": {
+        "@type": "Person",
+        "name": "Erasmus A. Junior",
+        "alternateName": "eirasmx"
+      },
+      "downloadUrl": "https://pypi.org/project/clera/",
+      "sameAs": [
+        "https://pypi.org/project/clera/",
+        "https://clera.readthedocs.io/en/latest/",
+        "https://github.com/cleragui/main/"
+      ],
+      "description": "A separate project by the same author: a Python GUI framework for desktop apps. Not to be confused with Clera, the JavaScript-based web-stack ecosystem known internally as CRE."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Clera Studio",
+      "author": {
+        "@type": "Person",
+        "name": "Erasmus A. Junior",
+        "alternateName": "eirasmx"
+      },
+      "applicationCategory": "DeveloperApplication",
+      "description": "The IDE for the Clera ecosystem, built with Python and Qt. Provides live previews and GitHub-integrated project management for CRE-based apps.",
+      "isPartOf": {
+        "@type": "SoftwareSourceCode",
+        "name": "Clera"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "CleraOS",
+      "author": {
+        "@type": "Person",
+        "name": "Erasmus A. Junior",
+        "alternateName": "eirasmx"
+      },
+      "applicationCategory": "OperatingSystem",
+      "description": "An offline-first, browser-based desktop operating system built as a PWA. A standalone project by the same author, distinct from Clera the web-stack ecosystem, though it uses CRE-based apps.",
+      "operatingSystem": "Web-based (PWA)",
+      "url": "https://cleraos.vercel.app",
+      "sameAs": ["https://cleraos.vercel.app"]
+    }
+  ]
+}
+</script>
+{% endblock %}
