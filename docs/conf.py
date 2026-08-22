@@ -2,7 +2,7 @@
 
 project = "Clera"
 copyright = "Clera"
-author = "Clera"
+author = "Erasmus A. Junior (eirasmx)"
 
 extensions = [
     "myst_parser",
@@ -30,6 +30,8 @@ myst_enable_extensions = [
 ]
 
 myst_heading_anchors = 3
+
+templates_path = ["_templates"]
 
 html_theme = "furo"
 html_title = "Clera Docs"
