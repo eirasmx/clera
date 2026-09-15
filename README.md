@@ -43,9 +43,9 @@ That is a working app. No setup, no imports, no configuration.
 
 ## ✨ What Clera gives you
 
-- **Clera Runtime** — runs your app inside a controlled, secure environment
-- **Clera Studio** — the IDE built for Clera, with a built-in simulator so you can preview your app on a phone screen without leaving your editor
-- **Export anywhere** — package as a PWA or native app when you are ready
+- **Clera Runtime**: runs your app inside a controlled, secure environment
+- **Clera Studio**: the IDE built for Clera, with a built-in simulator so you can preview your app on a phone screen without leaving your editor
+- **Export anywhere**: package as a PWA or native app when you are ready
 
 ---
 
